@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floppy Bird</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<section id="content">
+    <div class="content-wrap">
+    <div class="container">
+        <div class="row gx-5">
+        <div class="col-md-12">
+
+        <section id="slider" class="slider-element" style="position: relative; width: 100%; height: 100dvh; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #222;">
+            
+            <div id="fbird-immersive-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></div>
+            <div id="fbird-blur-mask" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></div>
+            <div id="particles-nasa" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;"></div>
+
+            <div id="fbird-game-container">
+                <canvas id="fbird-gameCanvas"></canvas>
+                <div id="fbird-gameScore">0</div>
+
+                <div id="fbird-ui-layer">
+                    
+                    <div id="fbird-selectionScreen" class="fbird-screen" style="display: flex;">
+                        <img id="fbird-logoImg" src="" alt="Logo do Jogo" class="fbird-game-logo">
+                        
+                        <div class="fbird-high-score-container">
+                            <span class="fbird-high-score-label">Recorde Atual</span>
+                            <span id="fbird-menuBestScore" class="fbird-high-score-value">0</span>
+                        </div>
+
+                        <div>
+                            <h2>Escolha seu Personagem</h2>
+                            <p class="fbird-key-hint d-none d-xl-block" style="margin-top: 0px; text-align: center !important;">A/D ou setas para alternar</p>
+                        </div>
+                        
+                        <div class="fbird-char-grid" id="fbird-charContainer"></div>
+                        
+                        <div style="width: 100%">
+                            <button class="fbird-btn" id="btn-start-game">JOGAR</button>
+                            
+                            <p class="fbird-key-hint d-none d-xl-block" style="text-align: center !important;">Pressione ESPAÇO ou ENTER para iniciar</p>
+                        </div>
+                    </div>
+
+                    <div id="fbird-gameOverScreen" class="fbird-screen" style="display: none;">
+                        <h2>FIM DE JOGO</h2>
+                        <div>
+                            <div class="fbird-score-small" style="text-align: center !important;">Pontuação</div>
+                            <div id="fbird-finalScore" style="text-align: center !important;" class="fbird-score-big">0</div>
+                            <div class="fbird-score-small">Melhor: <span id="fbird-bestScore" style="color:#fff">0</span></div>
+                        </div>
+                        <div style="width: 100%">
+                            <button class="fbird-btn" id="btn-reset-game">Jogar Novamente</button>
+                            <p class="fbird-key-hint d-none d-xl-block" style="text-align: center !important;">ESPAÇO ou ENTER para reiniciar</p>
+                            <div class="d-block d-md-none" style="margin-bottom: 15px;"></div>
+                            <button class="fbird-btn" id="btn-back-menu" style="background: #555; box-shadow: 0 4px 0 #333; font-size: 14px; margin-top: 10px;">Voltar ao Início</button>
+                            <p class="fbird-key-hint d-none d-xl-block" style="text-align: center !important;">ESC para voltar</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <script src="assets/js/script.js"></script>
+
+        </section>
+        
+        <div class="d-block d-md-none" style="margin-top: -35px;"></div>
+          
+        </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+</body>
+</html>
